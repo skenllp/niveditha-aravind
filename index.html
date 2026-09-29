@@ -1128,6 +1128,8 @@ function startOpeningFilm(){
   gateVideo.muted = false; gateVideo.currentTime = 0;
   const p = gateVideo.play();
   if (p && p.catch) p.catch(() => { gateVideo.muted = true; gateVideo.play().catch(openGate); });
+  // Start background music when opening video plays
+  tryPlayAudio();
 }
 gateVideo.addEventListener('ended', openGate);
 gateVideo.addEventListener('error', () => { if (gateStarted) openGate(); });

@@ -430,27 +430,132 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
 .section-transition svg{width:100%;height:100%;display:block;}
 
 /* ---------- venue ---------- */
-.venue-card{border:1px solid var(--glass-brd);border-radius:10px;overflow:hidden;background:rgba(20,14,8,.4);backdrop-filter:blur(6px);margin-top:2.5rem;text-align:left;}
-.venue-head{padding:2rem 2.2rem;border-bottom:1px solid var(--glass-brd);}
+.venue-card{
+  border:2px solid var(--gold);
+  border-radius:12px;
+  overflow:hidden;
+  background:linear-gradient(135deg, rgba(20,14,8,.65), rgba(30,20,12,.55));
+  backdrop-filter:blur(10px);
+  margin-top:2.5rem;
+  text-align:left;
+  box-shadow:0 8px 32px rgba(201,162,74,.25), 0 0 0 1px rgba(201,162,74,.1) inset;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.venue-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(201,162,74,.4), 0 0 0 2px rgba(201,162,74,.3) inset;
+}
+.venue-head{
+  padding:2.2rem 2.4rem;
+  border-bottom:2px solid rgba(201,162,74,.35);
+  background:linear-gradient(180deg, rgba(201,162,74,.08) 0%, transparent 100%);
+}
 .venue-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
 .venue-col{padding:2rem 2.2rem;}
 .venue-col:first-child{border-right:1px solid var(--glass-brd);}
-.reach-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.3rem;}
-.reach-item svg{width:20px;height:20px;color:var(--champagne);flex-shrink:0;margin-top:.2rem;}
-.reach-item b{display:block;font-size:1rem;}
-.reach-item span{font-size:.9rem;color:rgba(245,239,226,.7);}
+.reach-item{
+  display:flex;
+  gap:1rem;
+  align-items:flex-start;
+  margin-bottom:1.3rem;
+  padding:.7rem;
+  border-radius:6px;
+  transition:background .3s ease;
+}
+.reach-item:hover{
+  background:rgba(201,162,74,.08);
+}
+.reach-item svg{
+  width:22px;
+  height:22px;
+  color:var(--champagne);
+  flex-shrink:0;
+  margin-top:.2rem;
+  filter:drop-shadow(0 2px 4px rgba(201,162,74,.4));
+}
+.reach-item b{display:block;font-size:1.05rem;color:var(--champagne);font-family:var(--display);letter-spacing:.02em;}
+.reach-item span{font-size:.95rem;color:rgba(245,239,226,.85);}
 .stay-strip{display:flex;flex-wrap:wrap;gap:1rem;padding:1.6rem 2.2rem 2.2rem;border-top:1px solid var(--glass-brd);}
 .stay-chip{flex:1 1 150px;border:1px solid var(--glass-brd);border-radius:6px;padding:.9rem 1rem;font-size:.85rem;}
 .stay-chip b{display:block;font-family:var(--display);font-size:.8rem;letter-spacing:.05em;margin-bottom:.25rem;}
-.venue-actions{display:flex;gap:1rem;flex-wrap:wrap;padding:1.8rem 2.2rem 2.2rem;}
+.venue-actions{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  padding:1.8rem 2.4rem 2.2rem;
+  background:linear-gradient(180deg, transparent 0%, rgba(201,162,74,.05) 100%);
+}
 @media(max-width:760px){.venue-body{grid-template-columns:1fr;}.venue-col:first-child{border-right:none;border-bottom:1px solid var(--glass-brd);}}
-.events-venue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:2.5rem;text-align:left;}
-.event-venue-card{border:1px solid var(--glass-brd);border-radius:10px;padding:1.6rem 1.5rem;background:rgba(20,14,8,.4);backdrop-filter:blur(6px);}
-.event-venue-card .ev-eyebrow{display:block;font-family:var(--display);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
-.event-venue-card h4{font-family:var(--display);font-size:clamp(1.1rem,1.6vw,1.3rem);color:var(--ivory);margin-bottom:.6rem;}
-.event-venue-card .ev-item{display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;color:rgba(245,239,226,.78);margin-bottom:.5rem;}
-.event-venue-card .ev-item svg{width:16px;height:16px;color:var(--champagne);flex-shrink:0;margin-top:.15rem;}
-.event-venue-card .ev-map{display:inline-block;margin-top:.5rem;font-size:.78rem;letter-spacing:.08em;color:var(--champagne);text-decoration:underline;text-underline-offset:3px;}
+.events-venue-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem;
+  margin-top:2.5rem;
+  text-align:left;
+}
+.event-venue-card{
+  border:2px solid rgba(201,162,74,.4);
+  border-radius:12px;
+  padding:1.8rem 1.7rem;
+  background:linear-gradient(135deg, rgba(20,14,8,.5), rgba(30,20,12,.4));
+  backdrop-filter:blur(8px);
+  transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);
+}
+.event-venue-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(201,162,74,.35), 0 0 0 2px rgba(201,162,74,.5) inset;
+  border-color:var(--gold);
+}
+.event-venue-card .ev-eyebrow{
+  display:block;
+  font-family:var(--display);
+  font-size:.75rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--champagne);
+  margin-bottom:.7rem;
+  text-shadow:0 2px 8px rgba(201,162,74,.4);
+}
+.event-venue-card h4{
+  font-family:var(--display);
+  font-size:clamp(1.15rem,1.7vw,1.4rem);
+  color:var(--ivory);
+  margin-bottom:.8rem;
+  font-weight:600;
+  text-shadow:0 2px 6px rgba(0,0,0,.4);
+}
+.event-venue-card .ev-item{
+  display:flex;
+  gap:.7rem;
+  align-items:flex-start;
+  font-size:.92rem;
+  color:rgba(245,239,226,.88);
+  margin-bottom:.6rem;
+  line-height:1.5;
+}
+.event-venue-card .ev-item svg{
+  width:18px;
+  height:18px;
+  color:var(--champagne);
+  flex-shrink:0;
+  margin-top:.2rem;
+  filter:drop-shadow(0 2px 4px rgba(201,162,74,.3));
+}
+.event-venue-card .ev-map{
+  display:inline-block;
+  margin-top:.7rem;
+  font-size:.82rem;
+  letter-spacing:.08em;
+  color:var(--champagne);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  transition:color .3s ease, text-shadow .3s ease;
+}
+.event-venue-card .ev-map:hover{
+  color:var(--gold);
+  text-shadow:0 2px 8px rgba(201,162,74,.6);
+}
 
 /* ---------- RSVP ---------- */
 .rsvp-card{max-width:560px;margin:2.5rem auto 0;border:1px solid var(--glass-brd);border-radius:10px;padding:2.6rem 2.2rem;background:rgba(20,14,8,.45);backdrop-filter:blur(8px);text-align:left;}
@@ -724,8 +829,8 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
     <p class="script reveal" style="font-size:1.8rem;margin-top:3rem;">And now, we begin our forever.</p>
   </div>
 </section>
-<!-- OUR CELEBRATIONS INTRO
-<section class="section" id="celebrations">
+<!-- OUR CELEBRATIONS INTRO -->
+<!-- <section class="section" id="celebrations">
   <div class="bg-layer parallax-bg" style="background-image:url(assets/images/03_Journey_Couple.jpg);"></div>
   <div class="bg-fade dark"></div>
   <div class="content" style="max-width:900px;">
@@ -809,7 +914,7 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
 </section> -->
 
 <!-- THALIKETTU & WEDDING -->
-<!-- <section class="celeb-full theme-wedding" id="celeb-wedding" data-celeb-full data-theme="wedding" data-chapter="4">
+<section class="celeb-full theme-wedding" id="celeb-wedding" data-celeb-full data-theme="wedding" data-chapter="4">
   <div class="celeb-poster-bg" style="background-image:url(assets/images/celeb-wedding-poster.jpg);"></div>
   <video class="celeb-video-bg" data-src="assets/video/wedding.mp4" muted loop playsinline preload="none"></video>
   <div class="celeb-overlay"></div>
@@ -836,10 +941,10 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
     </div>
   </div>
   <p class="celeb-scroll-next scroll-hint" aria-hidden="true">Scroll For Next Chapter</p>
-</section> -->
+</section>
 
 <!-- RECEPTION -->
-<!-- <section class="celeb-full theme-reception" id="celeb-reception" data-celeb-full data-theme="reception" data-chapter="5">
+<section class="celeb-full theme-reception" id="celeb-reception" data-celeb-full data-theme="reception" data-chapter="5">
   <div class="celeb-poster-bg" style="background-image:url(assets/images/celeb-reception-poster.jpg);"></div>
   <video class="celeb-video-bg" data-src="assets/video/reception.mp4" muted loop playsinline preload="none"></video>
   <div class="celeb-overlay"></div>
@@ -862,7 +967,7 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
     </div>
   </div>
   <p class="celeb-scroll-next scroll-hint" aria-hidden="true">Continue The Journey</p>
-</section> -->
+</section>
 
 <!-- CELEBRATIONS PROGRESS NAV -->
 <nav class="celeb-progress-nav" id="celeb-progress-nav" aria-label="Celebration chapters">

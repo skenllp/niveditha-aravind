@@ -556,7 +556,18 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
   color:var(--gold);
   text-shadow:0 2px 8px rgba(201,162,74,.6);
 }
-
+.fam-sister{
+  margin-top:1.2rem;
+  padding-top:1rem;
+  border-top:1px solid rgba(217,184,119,.25);
+  font-size:1rem;
+  color:var(--champagne);
+  font-style:italic;
+  text-align:center;
+  letter-spacing:.02em;
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+  font-weight:400;
+}
 /* ---------- RSVP ---------- */
 .rsvp-card{max-width:560px;margin:2.5rem auto 0;border:1px solid var(--glass-brd);border-radius:10px;padding:2.6rem 2.2rem;background:rgba(20,14,8,.45);backdrop-filter:blur(8px);text-align:left;}
 .field{margin-bottom:1.4rem;}
@@ -664,7 +675,6 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
 .two-stage-flow{display:flex;flex-direction:column;align-items:center;gap:.4rem;margin:1.6rem 0;font-family:var(--display);font-size:.85rem;letter-spacing:.08em;color:var(--champagne);text-shadow:0 2px 8px rgba(0,0,0,.7);}
 .two-stage-flow .stage{padding:.5rem 1.1rem;border:1px solid rgba(217,184,119,.4);border-radius:30px;background:rgba(20,14,8,.35);}
 .two-stage-flow .arrow{font-size:1.1rem;color:var(--gold);}
-.fam-sister{margin-top:.6rem;font-size:.92rem;color:var(--champagne);font-style:italic;}
 </style>
 </head>
 <body>
@@ -779,6 +789,7 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
           <span class="contact-label">Contact</span>
           <div class="contact-text">+91 90722 22712</div>
         </div>
+        <div class="fam-sister">With love, sister Nandana Prakasan</div>
       </div>
       <div class="couple-mid reveal reveal-delay-3">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 8.5c0-2.5-2-4.5-4.5-4.5-1.5 0-2.8.7-3.5 1.9C11.3 4.7 10 4 8.5 4 6 4 4 6 4 8.5c0 5 8 11 8 11s8-6 8-11z"/></svg>
@@ -914,9 +925,9 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
 </section> -->
 
 <!-- THALIKETTU & WEDDING -->
-<section class="celeb-full theme-wedding" id="celeb-wedding" data-celeb-full data-theme="wedding" data-chapter="4">
+<section class="celeb-full theme-wedding" id="celeb-wedding" data-celeb-full data-theme="wedding" data-chapter="1">
   <div class="celeb-poster-bg" style="background-image:url(assets/images/celeb-wedding-poster.jpg);"></div>
-  <video class="celeb-video-bg" data-src="assets/video/wedding.mp4" muted loop playsinline preload="none"></video>
+  <video class="celeb-video-bg" src="assets/video/wedding.mp4" muted loop playsinline preload="auto" autoplay></video>
   <div class="celeb-overlay"></div>
   <span class="celeb-full-ornament">ॐ</span>
 
@@ -944,9 +955,9 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
 </section>
 
 <!-- RECEPTION -->
-<section class="celeb-full theme-reception" id="celeb-reception" data-celeb-full data-theme="reception" data-chapter="5">
+<section class="celeb-full theme-reception" id="celeb-reception" data-celeb-full data-theme="reception" data-chapter="2">
   <div class="celeb-poster-bg" style="background-image:url(assets/images/celeb-reception-poster.jpg);"></div>
-  <video class="celeb-video-bg" data-src="assets/video/reception.mp4" muted loop playsinline preload="none"></video>
+  <video class="celeb-video-bg" src="assets/video/reception.mp4" muted loop playsinline preload="auto" autoplay></video>
   <div class="celeb-overlay"></div>
   <span class="celeb-full-ornament">ॐ</span>
 
@@ -971,10 +982,7 @@ p{font-size:clamp(1.05rem,1.5vw,1.25rem);font-weight:400;line-height:1.7;color:r
 
 <!-- CELEBRATIONS PROGRESS NAV -->
 <nav class="celeb-progress-nav" id="celeb-progress-nav" aria-label="Celebration chapters">
-  <span class="cpn-count" id="cpn-count">1 / 5</span>
-  <button class="celeb-progress-dot" type="button" data-target="celeb-haldi" aria-label="Go to Haldi"></button>
-  <button class="celeb-progress-dot" type="button" data-target="celeb-mehendi" aria-label="Go to Mehendi"></button>
-  <button class="celeb-progress-dot" type="button" data-target="celeb-sangeeth" aria-label="Go to Sangeeth"></button>
+  <span class="cpn-count" id="cpn-count">1 / 2</span>
   <button class="celeb-progress-dot" type="button" data-target="celeb-wedding" aria-label="Go to Wedding"></button>
   <button class="celeb-progress-dot" type="button" data-target="celeb-reception" aria-label="Go to Reception"></button>
 </nav>
